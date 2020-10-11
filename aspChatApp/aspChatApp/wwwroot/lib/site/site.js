@@ -13,7 +13,6 @@ var appVue = new Vue({
         this.startSignalR();
     },
     data: {
-        userbtnShow: false,
         user: '',
         message: '',
         messages: [
@@ -33,7 +32,10 @@ var appVue = new Vue({
         //},
         startSignalR: function () {
             connection.start().then(function () {
-                document.getElementById("sendButton").disabled = false;
+                var btn2 = document.getElementById("sendButton");
+                if (btn2 != null) {
+                    btn2.disabled = false;
+                }
                 alert('Connected');
             }).catch(function (err) {
                 return console.error(err.toString());
