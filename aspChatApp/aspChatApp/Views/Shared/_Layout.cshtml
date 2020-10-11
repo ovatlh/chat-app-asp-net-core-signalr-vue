@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Chat-ASP-Net-Core</title>
+    <link href="~/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="divAppVue">
+        <header>
+        </header>
+
+        <main>
+            @RenderBody()
+        </main>
+
+        <footer>
+        </footer>
+    </div>
+</body>
+</html>
+<script src="~/lib/signalr/dist/browser/signalr.js"></script>
+<script src="~/lib/vue/dist/vue.js"></script>
+@*<script src="~/lib/site/site.js"></script>*@
+
+@RenderSection("Scripts", required: false)

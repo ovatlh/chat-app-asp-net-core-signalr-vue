@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Chat - User";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="divMain">
+    <h1>Chat - User</h1>
+
+    <div class="userControls">
+        <input type="text" placeholder="Username" class="ctrlUsername" v-model="user" />
+        <input type="text" placeholder="Message" class="ctrlMessage" v-model="message" />
+        <button class="ctrlButton" id="sendButton" v-on:click="sendMessage">Send</button>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/lib/site/site.js"></script>
+}
